@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "productId": {
+      "type": "uid"
+    },
+    "productName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "availability": {
+      "type": "boolean"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "creationDate": {
+      "type": "datetime"
+    },
+    "lastUpdatedDate": {
+      "type": "datetime"
+    },
+    "discountCode": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::discount.discount"
+    },
+    "craftsmanName": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::craftsman.craftsman",
+      "inversedBy": "productName"
+    },
+    "categoryName": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "productName"
+    },
+    "carts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::cart.cart",
+      "mappedBy": "products"
+    }
+  }
+}

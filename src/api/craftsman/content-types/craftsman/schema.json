@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "craftsmen",
+  "info": {
+    "singularName": "craftsman",
+    "pluralName": "craftsmen",
+    "displayName": "Craftsman",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "craftsmanId": {
+      "type": "uid"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "emailAddress": {
+      "type": "email"
+    },
+    "location": {
+      "type": "string"
+    },
+    "specialization": {
+      "type": "enumeration",
+      "enum": [
+        "woodCarving",
+        "batik",
+        "pottery",
+        "maskMaking",
+        "lacquerware",
+        "brassAndCopperware",
+        "traditionalDrumMaking",
+        "weavingAndHandloom",
+        "gemStoneCuttingAndJewellery",
+        "ivoryCarving",
+        "leatherWork",
+        "beeraluLace"
+      ]
+    },
+    "biography": {
+      "type": "richtext"
+    },
+    "ratingsAndFeedback": {
+      "type": "richtext"
+    },
+    "paymentMethod": {
+      "type": "enumeration",
+      "enum": [
+        "cash",
+        "card"
+      ]
+    },
+    "username": {
+      "type": "string"
+    },
+    "password": {
+      "type": "password"
+    },
+    "productName": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "craftsmanName"
+    }
+  }
+}

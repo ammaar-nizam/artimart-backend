@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventories",
+  "info": {
+    "singularName": "inventory",
+    "pluralName": "inventories",
+    "displayName": "Inventory"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "sku": {
+      "type": "uid"
+    },
+    "products": {
+      "type": "json"
+    },
+    "availability": {
+      "type": "boolean"
+    },
+    "creationDate": {
+      "type": "date"
+    },
+    "lastUpdatedDate": {
+      "type": "date"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "delivery_partners",
+  "info": {
+    "singularName": "delivery-partner",
+    "pluralName": "delivery-partners",
+    "displayName": "Delivery Partner"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "deliveryPartnerId": {
+      "type": "uid"
+    },
+    "deliveryPartnerName": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "biginteger"
+    },
+    "vehicleType": {
+      "type": "enumeration",
+      "enum": [
+        "bike",
+        "tuk",
+        "car"
+      ]
+    },
+    "licensePlateNumber": {
+      "type": "string"
+    },
+    "averageRating": {
+      "type": "richtext"
+    },
+    "deliveryHistory": {
+      "type": "json"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "inactive",
+        "suspended"
+      ]
+    }
+  }
+}
